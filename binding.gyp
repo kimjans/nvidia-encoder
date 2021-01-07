@@ -15,11 +15,11 @@
         "libraries": ["-lX11","-lGL", "-lglut","-lGLEW"]
       },
       "target_name": "AppEncGL",
-      "sources": [ "./video-src/sdk-encode/AppEncGL.cpp",
-                   "./video-src/sdk-encode/NvCodec/NvEncoder/NvEncoderGL.cpp",
-                  "./video-src/sdk-encode/NvCodec/NvEncoder/NvEncoder.cpp",
-                  "./video-src/sdk-encode/EncoderClass.cpp",
-                  "./video-src/sdk-encode/EncoderProxy.cpp"]
+      "sources": [ "./src/sdk-encode/AppEncGL.cpp",
+                   "./src/sdk-encode/NvCodec/NvEncoder/NvEncoderGL.cpp",
+                  "./src/sdk-encode/NvCodec/NvEncoder/NvEncoder.cpp",
+                  "./src/sdk-encode/EncoderClass.cpp",
+                  "./src/sdk-encode/EncoderProxy.cpp"]
     }
   ]
 }
