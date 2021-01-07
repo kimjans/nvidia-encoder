@@ -8,5 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "gypfile": true
+  "gypfile": true,
+  "dependencies": {
+    "node-addon-api": "^3.1.0"
+  }
 }
