@@ -23,8 +23,8 @@ EncoderProxy::EncoderProxy(const Napi::CallbackInfo& info) : Napi::ObjectWrap<En
   Napi::HandleScope scope(env);
 
   int length = info.Length();
-  if (length != 3 || !info[0].IsNumber()) {
-    Napi::TypeError::New(env, "Number expected").ThrowAsJavaScriptException();
+  if (length != 4 || !info[0].IsNumber()) {
+    Napi::TypeError::New(env, "4 Arguments expected").ThrowAsJavaScriptException();
   }
 
   Napi::Number nWidth = info[0].As<Napi::Number>();
