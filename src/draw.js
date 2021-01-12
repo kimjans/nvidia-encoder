@@ -1,7 +1,7 @@
 //Create context
 var width   = 1280
 var height  = 720
-var gl = require('gl')(width, height, { preserveDrawingBuffer: true })
+var gl = require('@linecorp/headless-gl')(width, height, { preserveDrawingBuffer: true })
  
 //Clear screen to red
 gl.clearColor(0, 0, 1, 1)
