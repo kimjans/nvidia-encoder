@@ -8,7 +8,7 @@
 
 class EncoderClass {
  public:
-  EncoderClass(int nWidth, int nHeight, char *outputPath); //constructor
+  EncoderClass(int nWidth, int nHeight, char *outputPath, char *encoderInitChar); //constructor
   bool create(); //getter for the value
   bool encodeCurrentFrame(bool lastFrame); //getter for the value
   bool finish(); //getter for the value
