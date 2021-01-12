@@ -17,6 +17,7 @@ class EncoderClass {
   int m_height;
 
   char outputPath[256];
+  char encoderInitChar[256];
   NvEncoderGL *m_enc;
   std::ofstream *m_fpOut;
 };

@@ -13,7 +13,7 @@ const addon = require('bindings')('AppEncGL');
 console.info( addon )
 
 const startTime = new Date().getTime();
-const enc = new addon.EncoderProxy(1280, 760, "./output/output.h264");
+const enc = new addon.EncoderProxy(1280, 760, "./output/output.h264", "-preset HP -fps 24 -profile baseline -bitrate 2M");
 enc.create();
 
 for(var i = 0 ; i < 2000 ; ++i){

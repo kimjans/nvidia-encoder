@@ -30,11 +30,14 @@ EncoderProxy::EncoderProxy(const Napi::CallbackInfo& info) : Napi::ObjectWrap<En
   Napi::Number nWidth = info[0].As<Napi::Number>();
   Napi::Number nHeight = info[1].As<Napi::Number>();
   Napi::String outputPath = info[2].As<Napi::String>();
+  Napi::String encoderInitParam = info[3].As<Napi::String>();
 
   char outputPathChar[256] = "";
+  char encoderInitChar[256] = "";
   sprintf(outputPathChar, outputPath.ToString().Utf8Value().c_str());
+  sprintf(encoderInitChar, encoderInitParam.ToString().Utf8Value().c_str());
 
-  this->encClass_ = new EncoderClass(nWidth.Int32Value(), nHeight.Int32Value(), outputPathChar);
+  this->encClass_ = new EncoderClass(nWidth.Int32Value(), nHeight.Int32Value(), outputPathChar, encoderInitChar);
 }
 Napi::Value EncoderProxy::Finish(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();

@@ -1,9 +1,11 @@
 #include "EncoderClass.h"
 simplelogger::Logger *logger = simplelogger::LoggerFactory::CreateConsoleLogger();
-EncoderClass::EncoderClass(int nWidth, int nHeight, char *outputPath){
+EncoderClass::EncoderClass(int nWidth, int nHeight, char *outputPath, char *encoderInitChar){
     this->m_width = nWidth;
     this->m_height = nHeight;
     std::copy(outputPath, outputPath+256, this->outputPath);
+    std::copy(encoderInitChar, encoderInitChar+256, this->encoderInitChar);
+
 
 }
 
@@ -20,7 +22,7 @@ bool EncoderClass::create()
             err << "Unable to open output file: " << this->outputPath << std::endl;
             throw std::invalid_argument(err.str());
         }
-        NvEncoderInitParam encodeCLIOptions = NvEncoderInitParam("-preset HP -fps 24 -profile baseline -bitrate 2M");
+        NvEncoderInitParam encodeCLIOptions = NvEncoderInitParam(this->encoderInitChar);
 
         this->m_enc = new NvEncoderGL(this->m_width, this->m_height, NV_ENC_BUFFER_FORMAT_ABGR);
     
