@@ -4,7 +4,7 @@
   "description": "Encoder by Nvidia-sdk and EGL",
   "main": "index.js",
   "scripts": {
-    "install_gl": "pm install @linecorp/headless-gl --registry=http://repo.linecorp.com/content/groups/npm/"
+    "install_gl": "npm install @linecorp/headless-gl --registry=http://repo.linecorp.com/content/groups/npm/"
   },
   "author": "",
   "license": "ISC",
